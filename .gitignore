@@ -4,3 +4,4 @@ target
 .project
 .settings/
 targets
+/bin/
