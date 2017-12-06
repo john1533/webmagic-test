@@ -24,7 +24,8 @@ public class MsWebScraper {
 		
 		
 		Request request = new Request();
-		request.setUrl("http://bet.hkjc.com/marksix/Results.aspx?lang=ch&nextpage=2&initpage=1")
+//		request.setUrl("http://bet.hkjc.com/marksix/Results.aspx?lang=ch&nextpage=1&initpage=1")
+		request.setUrl("http://bet.hkjc.com/marksix/Results.aspx?lang=ch") 
 		.setMethod("POST")
 //		.addHeader("Host","bet.hkjc.com").addHeader("Proxy-Connection", "keep-alive")
 //		.addHeader("Origin","http://bet.hkjc.com").addHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36")
@@ -71,13 +72,13 @@ public class MsWebScraper {
 		map.put("txtRandomNum","");
 		map.put("selectDrawID","10");
 		map.put("hiddenSelectDrawID","10");
-		map.put("radioDrawRange","");
-		map.put("GetDrawDate&_ctl0:ContentPlaceHolder1:resultsMarkSix:selectDrawFromMonth", "01");
-		map.put("hiddenSelectDrawFromMonth", "11");
+		map.put("radioDrawRange","GetDrawDate");
+		map.put("GetDrawDate&_ctl0:ContentPlaceHolder1:resultsMarkSix:selectDrawFromMonth", "10");
+		map.put("hiddenSelectDrawFromMonth", "10");
 		map.put("_ctl0:ContentPlaceHolder1:resultsMarkSix:selectDrawFromYear", "2017");
 		map.put("hiddenSelectDrawFromYear", "2017");
-		map.put("_ctl0:ContentPlaceHolder1:resultsMarkSix:selectDrawToMonth", "12");
-		map.put("hiddenSelectDrawToMonth", "12");
+		map.put("_ctl0:ContentPlaceHolder1:resultsMarkSix:selectDrawToMonth", "10");
+		map.put("hiddenSelectDrawToMonth", "10");
 		map.put("_ctl0:ContentPlaceHolder1:resultsMarkSix:selectDrawToYear", "2017");
 		map.put("hiddenSelectDrawToYear", "2017");
 		map.put("radioResultType", "GetAll");
