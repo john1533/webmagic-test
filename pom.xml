@@ -79,7 +79,7 @@
             <configuration>  
                 <archive>  
                     <manifest>  
-                        <mainClass>me.fourtween.webmagic.App</mainClass>  
+                        <mainClass>me.fourtween.webmagic.marksix.DailyScraper</mainClass>  
                     </manifest>  
                 </archive>  
                 <descriptorRefs>  

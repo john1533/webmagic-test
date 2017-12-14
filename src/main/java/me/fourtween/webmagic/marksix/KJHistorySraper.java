@@ -12,30 +12,9 @@ import us.codecraft.webmagic.model.HttpRequestBody;
 import us.codecraft.webmagic.proxy.Proxy;
 import us.codecraft.webmagic.proxy.SimpleProxyProvider;
 
-public class MsWebScraper {
-
-	 private static Logger logger = Logger.getLogger(MsWebScraper.class);    
-	public static void main(String[] args) {
-		
-//		Pattern p = Pattern.compile(".*總投注額 : \\$([0-9\\,]+)");
-//		Matcher m = p.matcher("asdfas總投注額 : $32,477,334");
-//		if(m.find()){
-//			System.out.println("總投注額 :"+m.group(1));
-//		}
-		
-		
-		
-		//开奖日期
-//		BasicConfigurator.configure();
-//		Spider.create(new KJPageProcessor())
-//        .addUrl("https://kjrq.org/d/?d=2017-07")
-//        .thread(5)
-//        .addPipeline(new KJPersistPipeline())
-//        .run();
-		
-		
-		//开奖历史
-//		for(int year=1993;year<=2017;year++){
+public class KJHistorySraper {
+	private static Logger logger = Logger.getLogger(KJHistorySraper.class);    
+	public static void main(String[] args){
 		for(int year=2010;year<=2017;year++){
 			for(int month = 1;month<=12;month++){
 				String strM = ""+month;
@@ -54,10 +33,6 @@ public class MsWebScraper {
 		        .run();
 			}
 		}
-		
-		
-		
-		
 	}
 	
 	public static HttpRequestBody createRequestBody(String year,String month){
@@ -86,5 +61,4 @@ public class MsWebScraper {
 		.setRequestBody(createRequestBody(year,month));
 		return request;
 	}
-
 }
